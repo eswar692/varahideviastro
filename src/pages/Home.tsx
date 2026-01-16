@@ -33,7 +33,7 @@ const Home = () => {
       <AboutAstrologer />
       <AstrologyServices />
       <AstrologyServicesModern />
-      <AllServicesModern />
+      {/* <AllServicesModern /> */}
       <HomeLastDesign />
       <Testimonials />
       <FAQ />
@@ -158,44 +158,94 @@ const Problems = () => {
 
 const AboutAstrologer = () => {
   return (
-    <section className="bg-gradient-to-r from-yellow-200 via-red-200 to-pink-300 py-16 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left Side Content */}
-        <div>
-          <button className="bg-red-700 text-white px-5 py-2 rounded-full mb-6 text-sm md:text-base font-bold montserrat shadow-lg hover:scale-105 transition-transform">
-            LET'S KNOW ABOUT
+    <section
+      className="
+      relative py-24 px-6 overflow-hidden
+      bg-gradient-to-br from-[#3a0ca3] via-[#7209b7] to-[#f72585]
+    "
+    >
+      {/* Glow overlays */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,215,0,0.35),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.15),transparent_45%)]" />
+
+      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+        {/* Left Content */}
+        <div className="text-white">
+          <button
+            className="
+              mb-6 px-6 py-2 rounded-full
+              bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500
+              text-black font-bold text-sm md:text-base
+              montserrat shadow-xl
+              hover:scale-105 transition-transform
+            "
+          >
+            LET’S KNOW ABOUT
           </button>
 
-          <h2 className="text-3xl md:text-5xl font-extrabold text-red-800 mb-6 montserrat drop-shadow-lg">
+          <h2
+            className="
+              text-3xl md:text-5xl font-extrabold mb-6
+              montserrat
+              bg-gradient-to-r from-yellow-300 via-pink-300 to-white
+              bg-clip-text text-transparent
+              drop-shadow-2xl
+            "
+          >
             {person_name}
           </h2>
 
-          <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-4 open-sans">
-            The world-famous astrologer{" "}
-            <span className="font-bold text-red-600">{person_name}</span>{" "}
-            provides powerful solutions for all life problems. Trained by his
-            father and grandfather, he brings decades of experience and accurate
-            guidance to his clients.
+          <p className="text-lg md:text-xl leading-relaxed mb-5 open-sans text-white/90">
+            The world-known astrologer{" "}
+            <span className="font-bold text-yellow-300">{person_name}</span>{" "}
+            offers traditional spiritual guidance for life’s most challenging
+            situations. Trained through generations of astrological knowledge,
+            his consultations are rooted in experience and discipline.
           </p>
 
-          <p className="text-gray-800 text-lg md:text-xl leading-relaxed open-sans">
-            Renowned for understanding the core of every problem, he ensures
-            complete satisfaction and lasting solutions. People from all over
-            the world trust his advice for love, career, family, and spiritual
-            guidance.
+          <p className="text-lg md:text-xl leading-relaxed open-sans text-white/90">
+            Known for deep understanding and clarity, he supports individuals
+            seeking guidance in love, career, family, and spiritual direction.
+            Clients across the globe trust his calm approach and thoughtful
+            insights.
           </p>
         </div>
 
-        {/* Right Side Image */}
-        <div className="flex justify-center relative group">
-          <div className="relative w-full h-[450px] md:h-[500px] overflow-hidden rounded-3xl shadow-2xl">
+        {/* Right Image */}
+        <div className="relative group">
+          <div
+            className="
+            relative w-full h-[450px] md:h-[520px]
+            rounded-3xl overflow-hidden
+            shadow-[0_40px_120px_rgba(0,0,0,0.6)]
+          "
+          >
             <img
               src="https://i.pinimg.com/736x/ea/1d/12/ea1d121d1a00aec32b93a79d6bb72ae8.jpg"
-              alt="Astrologer Banner"
-              className="w-full h-full object-cover transform transition duration-700 group-hover:scale-105"
+              alt="Astrologer"
+              className="
+                w-full h-full object-cover
+                transition-transform duration-700
+                group-hover:scale-110
+              "
             />
-            <div className="absolute inset-0 bg-black/20 rounded-3xl group-hover:bg-black/30 transition"></div>
+            <div
+              className="
+              absolute inset-0
+              bg-gradient-to-t from-black/60 via-black/20 to-transparent
+              group-hover:from-black/70 transition
+            "
+            />
           </div>
+
+          {/* Glow border */}
+          <div
+            className="
+            absolute -inset-1 rounded-3xl
+            bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600
+            opacity-40 blur-xl -z-10
+          "
+          />
         </div>
       </div>
     </section>
@@ -206,66 +256,108 @@ const AstrologyServices = () => {
   const services = [
     {
       title: "Breakup Problem",
-      desc: "Breakup Problem is very common in today's generation and if you are also going through the same then do use astrology to keep such separation problems far away.",
+      desc: "Astrology guidance to handle separation issues and restore emotional balance.",
       img: "https://i.pinimg.com/736x/1c/77/2c/1c772cd72354da24308771d64fc70d02.jpg",
     },
     {
-      title: "Gf/Bf Dispute",
-      desc: "Gf/Bf Dispute always is a stressful situation. Astrological remedies help to keep your relationship smooth and healthy.",
+      title: "Gf / Bf Dispute",
+      desc: "Supportive astrology remedies to reduce conflicts and improve understanding.",
       img: "https://i.pinimg.com/736x/a9/63/0d/a9630de48cbdf2fe602f0707e7e5a490.jpg",
     },
     {
       title: "Love Problem",
-      desc: "It is not easy to come out from a Love Problem but astrology can provide a better path to keep love alive in relationships.",
+      desc: "Guidance focused on strengthening love and emotional harmony in relationships.",
       img: "https://i.pinimg.com/736x/04/f5/8b/04f58b8fa673e305280ffbefc464ed74.jpg",
     },
     {
       title: "Family Problem",
-      desc: "When you want to get rid of Family Problem, use astrological remedies that bring peace and positivity at home.",
+      desc: "Astrology-based consultation to bring peace and positivity into family life.",
       img: "https://i.pinimg.com/1200x/65/90/34/6590344e50ed6a28c5baf17159f702fd.jpg",
     },
   ];
+
   return (
-    <section className="relative py-16 px-6 bg-gradient-to-b from-rose-50 via-pink-50 to-purple-100">
-      <div className="max-w-7xl mx-auto text-center">
+    <section
+      className="
+        relative py-24 px-6 overflow-hidden
+        bg-gradient-to-b from-[#020617] via-[#020024] to-[#020617]
+      "
+    >
+      {/* Soft glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(234,179,8,0.15),transparent_60%)]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold montserrat mb-12">
-          <span className="bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent drop-shadow-sm">
-            Our Other Astrology Services
-          </span>
+        <h2
+          className="
+            text-4xl md:text-5xl font-bold mb-16
+            font-playfair
+            bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500
+            bg-clip-text text-transparent
+          "
+        >
+          Our Other Astrology Services
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="group relative bg-white/70 backdrop-blur-lg rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-pink-300/40 transition-all duration-500"
+              className="
+                group relative rounded-3xl
+                bg-white/5 backdrop-blur-xl
+                border border-white/10
+                shadow-xl hover:shadow-2xl
+                transition-all duration-300
+                overflow-hidden
+              "
             >
               {/* Image */}
               <div className="relative h-56 w-full overflow-hidden">
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="h-full w-full object-cover transform group-hover:scale-110 transition duration-700"
+                  className="
+                    w-full h-full object-cover
+                    group-hover:scale-110
+                    transition-transform duration-700
+                  "
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
-                <h3 className="absolute bottom-3 left-4 text-lg font-bold text-white drop-shadow-md montserrat">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <h3
+                  className="
+                    absolute bottom-4 left-4
+                    text-lg font-semibold
+                    font-playfair
+                    text-yellow-300
+                    drop-shadow-lg
+                  "
+                >
                   {service.title}
                 </h3>
               </div>
 
               {/* Content */}
               <div className="p-6 text-center">
-                <p className="text-gray-700 text-sm open-sans mb-5 leading-relaxed">
+                <p className="text-gray-300 text-sm font-inter leading-relaxed mb-6">
                   {service.desc}
                 </p>
 
-                {/* Button */}
+                {/* CTA */}
                 <a href={`tel:${phone_number}`}>
-                  <button className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 shadow-md hover:shadow-lg hover:scale-105 transition">
+                  <button
+                    className="
+                      w-full flex items-center justify-center gap-2
+                      px-5 py-3 rounded-full
+                      font-medium text-gray-900
+                      bg-gradient-to-r from-amber-400 to-yellow-500
+                      shadow-lg hover:shadow-xl
+                      hover:scale-105 transition
+                    "
+                  >
                     <Phone className="w-4 h-4" />
-                    Call us now
+                    Call Now
                   </button>
                 </a>
               </div>
@@ -288,53 +380,96 @@ const AstrologyServicesModern = () => {
       img: "https://astrologerdeepaksharma.in/images/s2.png",
     },
     {
-      title: "Husband Wife Dispute",
+      title: "Husband & Wife Dispute",
       img: "https://astrologerdeepaksharma.in/images/s1.png",
     },
     {
-      title: "Ex Love Back Expert",
+      title: "Ex Love Back Guidance",
       img: "https://astrologerdeepaksharma.in/images/s3.png",
     },
   ];
+
   return (
-    <section className="relative py-16 px-6 bg-gradient-to-br from-pink-50 via-rose-50 to-orange-100">
-      <div className="max-w-7xl mx-auto text-center">
+    <section
+      className="
+        relative py-24 px-6 overflow-hidden
+        bg-gradient-to-b from-[#020617] via-[#020024] to-[#020617]
+      "
+    >
+      {/* Soft glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(236,72,153,0.18),transparent_60%)]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold montserrat mb-14">
-          <span className="bg-gradient-to-r from-red-600 via-pink-600 to-orange-500 bg-clip-text text-transparent drop-shadow-sm">
-            ✨ Best Astrology Services ✨
-          </span>
+        <h2
+          className="
+            text-4xl md:text-5xl font-bold mb-20
+            font-playfair
+            bg-gradient-to-r from-yellow-400 via-pink-400 to-orange-400
+            bg-clip-text text-transparent
+          "
+        >
+          Best Astrology Services
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="group relative bg-white/70 backdrop-blur-xl rounded-3xl border border-pink-200/50 shadow-xl hover:shadow-2xl hover:shadow-pink-400/40 overflow-hidden transition-transform hover:-translate-y-3 duration-500"
+              className="
+                group relative rounded-3xl
+                bg-white/5 backdrop-blur-xl
+                border border-white/10
+                shadow-xl hover:shadow-2xl
+                transition-all duration-300
+                hover:-translate-y-3
+              "
             >
               {/* Image */}
-              <div className="flex justify-center mt-8">
-                <div className="relative w-32 h-32 rounded-2xl overflow-hidden border-4 border-pink-400 shadow-lg group-hover:scale-110 transition-transform duration-500">
+              <div className="flex justify-center mt-10">
+                <div
+                  className="
+                    relative w-32 h-32 rounded-2xl overflow-hidden
+                    border border-amber-400/40
+                    shadow-lg
+                    group-hover:scale-110
+                    transition-transform duration-500
+                  "
+                >
                   <img
                     src={service.img}
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />
-                  {/* Glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-pink-500/20 via-orange-400/10 to-transparent opacity-70 mix-blend-overlay"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/20 to-transparent" />
                 </div>
               </div>
 
-              {/* Text */}
+              {/* Content */}
               <div className="p-6 text-center">
-                <h3 className="text-2xl font-bold montserrat mb-4 bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent">
+                <h3
+                  className="
+                    text-xl md:text-2xl font-semibold mb-6
+                    font-playfair
+                    text-yellow-300
+                  "
+                >
                   {service.title}
                 </h3>
 
-                {/* Call Button */}
+                {/* CTA */}
                 <a href={`tel:${phone_number}`}>
-                  <button className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full font-semibold text-white shadow-lg bg-gradient-to-r from-red-500 via-pink-500 to-orange-500 hover:shadow-xl hover:shadow-pink-400/60 hover:scale-105 transition">
+                  <button
+                    className="
+                      w-full flex items-center justify-center gap-2
+                      px-6 py-3 rounded-full
+                      font-medium text-gray-900
+                      bg-gradient-to-r from-amber-400 to-yellow-500
+                      shadow-lg hover:shadow-xl
+                      hover:scale-105 transition
+                    "
+                  >
                     <Phone className="w-5 h-5" />
                     Call Now
                   </button>
@@ -427,61 +562,101 @@ const AllServicesModern = () => {
 
 function HomeLastDesign() {
   return (
-    <section className="relative bg-gradient-to-tr from-rose-50 via-orange-50 to-yellow-100 py-20 px-6 overflow-hidden">
-      {/* Decorative Blobs */}
-      <div className="absolute -top-10 -left-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-      <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+    <section
+      className="
+        relative py-28 px-6 overflow-hidden
+        bg-gradient-to-b from-[#020617] via-[#020024] to-[#020617]
+      "
+    >
+      {/* Glow accents */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(234,179,8,0.25),transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(236,72,153,0.18),transparent_45%)]" />
 
-      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        {/* Left Side - Image */}
+      <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        {/* Left – Image */}
         <div className="flex justify-center">
           <div className="relative group">
-            <img
-              src="https://i.pinimg.com/736x/00/1d/bb/001dbb9f0f876f5b467b2c74d8fcf23b.jpg"
-              alt={person_name}
-              className="w-80 h-80 rounded-full border-8 border-white shadow-2xl object-cover group-hover:scale-105 transition-transform duration-500"
+            {/* Gradient ring */}
+            <div
+              className="
+                absolute -inset-3 rounded-full
+                bg-gradient-to-r from-yellow-400 via-amber-500 to-pink-500
+                blur-2xl opacity-40
+                group-hover:opacity-60 transition
+              "
             />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-400 to-pink-500 opacity-20 group-hover:opacity-30 blur-2xl transition"></div>
+            <img
+              src="https://i.pinimg.com/1200x/12/39/bb/1239bbdb9f4b81b9db0fa82ee4e2ecb6.jpg"
+              alt={person_name}
+              className="
+                relative w-80 h-80 md:w-96 md:h-96
+                rounded-full object-cover
+                border border-amber-400/40
+                shadow-[0_40px_120px_rgba(0,0,0,0.6)]
+                group-hover:scale-105 transition-transform duration-500
+              "
+            />
           </div>
         </div>
 
-        {/* Right Side - Content */}
+        {/* Right – Content */}
         <div className="space-y-6 text-center md:text-left">
-          <h2 className="text-xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-pink-600 to-orange-500 drop-shadow-lg">
+          <h2
+            className="
+              text-3xl md:text-5xl font-bold
+              font-playfair
+              bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500
+              bg-clip-text text-transparent
+            "
+          >
             {person_name}
           </h2>
-          <h3 className="text-2xl font-semibold text-gray-800">
-            🌟 Famous Astrologer in India 🌟
+
+          <h3 className="text-xl md:text-2xl font-semibold text-gray-200">
+            Trusted Astrology & Spiritual Guidance
           </h3>
-          <p className="text-gray-700 leading-relaxed max-w-lg mx-auto md:mx-0">
-            With years of expertise in{" "}
-            <span className="font-semibold text-red-600">
-              Vastu, Horoscope & Vashikaran
+
+          <p className="font-inter text-gray-300 leading-relaxed max-w-lg mx-auto md:mx-0">
+            With years of experience in{" "}
+            <span className="font-semibold text-amber-400">
+              Vastu, Horoscope & Spiritual Consultation
             </span>
-            , {person_name} has guided countless people across
-            <span className="text-orange-600">
-              {" "}
-              Hindu, Muslim & Christian
-            </span>{" "}
-            communities, solving life problems with trusted remedies.
+            , guidance is offered to individuals from diverse backgrounds
+            seeking clarity, balance, and confident life decisions.
           </p>
 
-          {/* Contact Buttons */}
-          <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-6">
             <a
               href={`tel:${phone_number}`}
-              className="flex items-center gap-2 bg-gradient-to-r from-red-600 to-pink-600 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition"
+              className="
+                flex items-center gap-2
+                px-7 py-3 rounded-full
+                font-medium text-gray-900
+                bg-gradient-to-r from-amber-400 to-yellow-500
+                shadow-lg hover:shadow-xl
+                hover:scale-105 transition
+              "
             >
-              <Phone size={20} /> Call Now
+              <Phone size={20} />
+              Call Now
             </a>
 
             <a
               href={`https://wa.me/${whatsapp_number}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition"
+              className="
+                flex items-center gap-2
+                px-7 py-3 rounded-full
+                font-medium text-white
+                bg-gradient-to-r from-emerald-500 to-emerald-600
+                shadow-lg hover:shadow-xl
+                hover:scale-105 transition
+              "
             >
-              <MessageCircle size={20} /> Chat With Us
+              <MessageCircle size={20} />
+              WhatsApp
             </a>
           </div>
         </div>

@@ -14,9 +14,12 @@ export default function Carousel() {
   const slides = [
     {
       id: 1,
-      img: "IMG-20250926-WA0007.jpg",
+      img: "https://i.pinimg.com/1200x/3c/92/92/3c929254c1a0f88ef3ad9808780ffb46.jpg",
     },
-    { id: 2, img: "IMG-20250926-WA0012.jpg" },
+    {
+      id: 2,
+      img: "https://i.pinimg.com/1200x/f1/eb/07/f1eb072e9930bb22bf9afc53fd9faf89.jpg",
+    },
     {
       id: 3,
       img: "https://i.pinimg.com/1200x/f1/8e/c5/f18ec5f77c36d2bd82804180365c7608.jpg",
@@ -27,7 +30,7 @@ export default function Carousel() {
     },
     {
       id: 5,
-      img: "https://i.pinimg.com/736x/5f/93/38/5f9338bbf17b820c59383734c03302b8.jpg",
+      img: "https://i.pinimg.com/1200x/fc/b1/54/fcb154019b1609ca4b057958eb44548d.jpg",
     },
     {
       id: 6,
@@ -35,7 +38,7 @@ export default function Carousel() {
     },
     {
       id: 7,
-      img: "https://i.pinimg.com/736x/62/b3/58/62b358e267e59d97cad63c49de2f8b44.jpg",
+      img: "https://i.pinimg.com/736x/34/1d/eb/341deb4d9ba9bd2934f0d996567b37a3.jpg",
     },
     {
       id: 8,
