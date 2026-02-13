@@ -99,14 +99,7 @@ const LogoAndMenu = () => (
             href="tel:6363600791"
             className="text-rose-600 font-semibold hover:text-rose-700 transition"
           >
-            6363600791
-          </a>
-          <span className="text-gray-400">|</span>
-          <a
-            href="tel:7676384744"
-            className="text-rose-600 font-semibold hover:text-rose-700 transition"
-          >
-            7676384744
+            {phone_number}
           </a>
         </div>
       </div>

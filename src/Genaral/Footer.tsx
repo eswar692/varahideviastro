@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import useInViewOnce from "./InView";
-import { phone_number, phone_number2 } from "./secret";
+import { phone_number } from "./secret";
 
 export default function Footer() {
   const [ref, inView] = useInViewOnce(0.2);
@@ -65,9 +65,7 @@ export default function Footer() {
           <p className="font-inter text-gray-300 text-sm mb-2">
             📞 {phone_number}
           </p>
-          <p className="font-inter text-gray-300 text-sm mb-4">
-            💬 {phone_number2}
-          </p>
+
           <p className="text-xs uppercase tracking-widest text-amber-300">
             Trusted • Confidential • Supportive
           </p>
