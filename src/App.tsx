@@ -7,6 +7,7 @@ import Header from "./Genaral/Header";
 import Footer from "./Genaral/Footer";
 import CallToAction from "./Genaral/CallToAction";
 import PrivacyPolicy from "./pages/Privacy-policy";
+import TermsOfService from "./pages/termsofservice";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="*" element={<Home />} />
       </Routes>
 
