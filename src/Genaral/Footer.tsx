@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import useInViewOnce from "./InView";
 import { phone_number } from "./secret";
 
@@ -132,46 +133,16 @@ export default function Footer() {
             </a>{" "}
             • All Rights Reserved
           </p>
+          <p>
+            <h3 className="text-xs font-inter text-gray-500 hover:text-amber-400 transition cursor-pointer">
+              <a href="/privacy-policy"> Privacy Policy</a>
+            </h3>
+            <h3 className="text-xs font-inter text-gray-500 hover:text-amber-400 transition cursor-pointer">
+              <a href="/terms-of-service"> Terms of Service</a>
+            </h3>
+          </p>
         </div>
       </div>
     </motion.footer>
   );
 }
-
-// const CopyRightAndContact = () => {
-//   return (
-//     <div className="py-2 z-30 bg-gradient-to-r from-red-700 to-orange-600 text-white absolute bottom-0 left-0 right-0">
-//       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-//         {/* Left Column */}
-//         <div className="mb-4 md:mb-0 text-center md:text-left flex gap-2">
-//           <p className="font-montserrat text-xl montserrat font-semibold mt-2">
-//             Designed and Developed By Eswar
-//           </p>
-//           <a
-//             href="https://wa.me/918886921826?text=Hello%20Pro%20Daddy%20Agency"
-//             className="text-lg font-bold font-roboto hover:underline hover:text-yellow-300 transition"
-//           >
-//             <button className=" text-black bg-white   py-2 px-4 rounded text-sm">
-//               Pro Daddy Agency
-//             </button>
-//           </a>
-//         </div>
-
-//         {/* Right Column */}
-//         <div className="text-center md:text-right poppins text-md">
-//           <p className=" font-montserrat montserrat">
-//             © {new Date().getFullYear()}{" "}
-//             <a
-//               href="https://famousvashikaran.in/"
-//               target="_blank"
-//               className="font-semibold hover:text-yellow-300 transition"
-//             >
-//               www.famousvashikaran.in
-//             </a>{" "}
-//             – All Rights Reserved.
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
