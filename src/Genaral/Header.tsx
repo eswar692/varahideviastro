@@ -87,12 +87,15 @@ const LogoAndMenu = () => (
         </p>
 
         {/* Service line */}
-        <p className="font-inter text-xs md:text-sm text-gray-600 mt-1 max-w-[440px]">
-          Traditional astrology guidance for love, marriage, and personal
-          harmony
+        <p className="font-inter font-bold text-xs md:text-sm text-gray-600 mt-1 max-w-[440px]">
+          2-46, near ramalayam, Pedavedi, pinakadami, pinakadami, <br />
+          Eluru <br />
+          ANDHRA PRADESH, 534003
+          <br />
+          varahideviastro@gmail.com
         </p>
 
-        {/* Call numbers */}
+        {/* Call numbers
         <div className="mt-2 flex flex-wrap items-center gap-2 text-xs md:text-sm font-inter">
           <span className="text-gray-700 font-semibold">Call Now:</span>
           <a
@@ -101,7 +104,7 @@ const LogoAndMenu = () => (
           >
             {phone_number}
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
 
