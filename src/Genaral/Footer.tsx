@@ -124,11 +124,11 @@ export default function Footer() {
           <p className="text-xs font-inter text-gray-500">
             © {new Date().getFullYear()}{" "}
             <a
-              href="https://famousvashikaran.in/"
+              href="https://varahideviastro.in/"
               target="_blank"
               className="hover:text-amber-400 transition"
             >
-              keralaastro.in
+              varahideviastro.in
             </a>{" "}
             • All Rights Reserved
           </p>
