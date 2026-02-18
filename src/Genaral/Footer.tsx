@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import useInViewOnce from "./InView";
 import { phone_number } from "./secret";
 
