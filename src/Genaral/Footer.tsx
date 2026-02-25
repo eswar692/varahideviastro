@@ -150,7 +150,7 @@ export default function Footer() {
               <a href="/privacy-policy"> Privacy Policy</a>
             </h3>
             <h3 className="text-sm roboto hover:text-amber-400 transition cursor-pointer">
-              <a href="/terms-of-service"> Terms of Service</a>
+              <a href="/terms"> Terms of Service</a>
             </h3>
           </p>
         </div>
