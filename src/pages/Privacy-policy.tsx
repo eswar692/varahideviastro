@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { business_name } from "../Genaral/secret";
 
 // PrivacyPolicy.tsx
 // Simplified Privacy Policy component in TypeScript — only mentions data collected from a single form.
@@ -17,7 +18,7 @@ interface Props {
 }
 
 const PrivacyPolicy: React.FC<Props> = ({
-  companyName = "Famous",
+  companyName = business_name,
   effectiveDate = "January 1, 2025",
   showAccept = false,
   onAccept = () => {},
@@ -64,8 +65,8 @@ const PrivacyPolicy: React.FC<Props> = ({
   const [open, setOpen] = useState<Record<string, boolean>>(() =>
     sections.reduce(
       (acc, s) => ({ ...acc, [s.id]: true }),
-      {} as Record<string, boolean>
-    )
+      {} as Record<string, boolean>,
+    ),
   );
 
   function toggle(id: string) {

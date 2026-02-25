@@ -40,7 +40,7 @@ const ImageGrid = () => {
               bg-clip-text text-transparent
             "
           >
-            Famous Vashikaran
+            Varahi Devi Astro
           </span>
 
           <span className="block mt-3 text-sm md:text-lg font-inter text-gray-300">

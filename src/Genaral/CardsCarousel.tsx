@@ -12,32 +12,32 @@ const CardCarousel = () => {
       align: "center",
       dragFree: true,
     },
-    [Autoplay({ delay: 5000, stopOnInteraction: false })]
+    [Autoplay({ delay: 5000, stopOnInteraction: false })],
   );
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
+    [emblaApi],
   );
   const scrollNext = useCallback(
     () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
+    [emblaApi],
   );
 
   const cards = [
     {
-      title: "Love & Relationship Guidance",
-      desc: "Astrology-based guidance to restore emotional balance, clear misunderstandings, and support healthy relationships.",
+      title: "Relationship & Personal Guidance",
+      desc: "Astrological consultation focused on understanding relationship dynamics, improving communication, and gaining emotional clarity.",
       img: "https://i.pinimg.com/736x/9e/62/89/9e6289902fb93c22b7245c4a72ab355d.jpg",
     },
     {
-      title: "Psychic & Horoscope Reading",
-      desc: "Gain clarity through traditional horoscope and intuitive readings focused on life direction and decision-making.",
+      title: "Horoscope & Insightful Readings",
+      desc: "Traditional horoscope-based readings designed to offer perspective and thoughtful insight for personal growth and life decisions.",
       img: "https://i.pinimg.com/736x/d1/7b/6e/d17b6e6bbe4cb76812aea53029b0182d.jpg",
     },
     {
-      title: "Business & Financial Guidance",
-      desc: "Consultation to support business stability, planning, and confidence through astrological insight.",
+      title: "Business & Career Consultation",
+      desc: "Astrological guidance aimed at supporting planning, confidence, and informed decision-making in business and professional matters.",
       img: "https://i.pinimg.com/736x/84/dd/e6/84dde6e4a1641f19a2f53577ec4b9f4c.jpg",
     },
   ];

@@ -2,7 +2,13 @@ import { Heart, MenuIcon, ShieldCheck, Sparkles, X } from "lucide-react";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
-import { business_name, person_name, phone_number } from "./secret";
+import {
+  address,
+  business_name,
+  person_name,
+  phone_number,
+  phone_number2,
+} from "./secret";
 
 const Header = () => {
   return (
@@ -88,11 +94,11 @@ const LogoAndMenu = () => (
 
         {/* Service line */}
         <p className="font-inter font-bold text-xs md:text-sm text-gray-600 mt-1 max-w-[440px]">
-          2-46, near ramalayam, Pedavedi, pinakadami, pinakadami, <br />
-          Eluru <br />
-          ANDHRA PRADESH, 534003
+          {address.line1} <br />
+          {address.line2} <br />
+          {address.city}, {address.state}, {address.pincode}, {address.country}
           <br />
-          varahideviastro@gmail.com
+          {phone_number} - {phone_number2}
         </p>
 
         {/* Call numbers

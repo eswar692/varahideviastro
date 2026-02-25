@@ -1,22 +1,19 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import useInViewOnce from "./InView";
-import { phone_number } from "./secret";
+import { address, business_name, phone_number, phone_number2 } from "./secret";
 
 export default function Footer() {
   const [ref, inView] = useInViewOnce(0.2);
 
   const services = [
-    "Vashikaran Guidance",
     "Love & Relationship Consultation",
-    "Astrology Readings",
     "Marriage & Family Advice",
     "Career & Life Direction",
     "Personal Harmony Solutions",
   ];
 
   const whyChoose = [
-    "Experienced Astrologer",
     "Confidential Consultation",
     "Trusted by Thousands",
     "Online & Offline Support",
@@ -48,7 +45,7 @@ export default function Footer() {
         {/* About */}
         <div>
           <h2 className="font-playfair text-2xl mb-4 text-yellow-400">
-            About Our Astrology
+            About {business_name}
           </h2>
           <p className="font-inter text-gray-300 leading-relaxed text-sm">
             We provide traditional astrology guidance rooted in experience and
@@ -62,8 +59,24 @@ export default function Footer() {
           <h2 className="font-playfair text-2xl mb-4 text-yellow-400">
             Contact
           </h2>
-          <p className="font-inter text-gray-300 text-sm mb-2">
+          <div className="text-xl">
+            <ul>
+              <li>
+                {address.line1}, {address.line2}
+              </li>
+              <li>
+                {address.city}, {address.state}
+              </li>
+              <li>
+                {address.country} - {address.pincode}
+              </li>
+            </ul>
+          </div>
+
+          <p className="font-inter text-gray-300 text-xl mb-2">
             📞 {phone_number}
+            <br />
+            📞 {phone_number2}
           </p>
 
           <p className="text-xs uppercase tracking-widest text-amber-300">
@@ -133,10 +146,10 @@ export default function Footer() {
             • All Rights Reserved
           </p>
           <p>
-            <h3 className="text-xs font-inter text-gray-500 hover:text-amber-400 transition cursor-pointer">
+            <h3 className="text-sm roboto hover:text-amber-400 transition cursor-pointer">
               <a href="/privacy-policy"> Privacy Policy</a>
             </h3>
-            <h3 className="text-xs font-inter text-gray-500 hover:text-amber-400 transition cursor-pointer">
+            <h3 className="text-sm roboto hover:text-amber-400 transition cursor-pointer">
               <a href="/terms-of-service"> Terms of Service</a>
             </h3>
           </p>

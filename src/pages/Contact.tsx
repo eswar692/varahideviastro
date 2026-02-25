@@ -1,6 +1,6 @@
 import { MessageCircle, Phone } from "lucide-react";
 import Form from "../Genaral/Form";
-import { phone_number, whatsapp_number } from "../Genaral/secret";
+import { address, phone_number, whatsapp_number } from "../Genaral/secret";
 
 export default function Contact() {
   return (
@@ -49,8 +49,17 @@ export default function Contact() {
             family matters, or personal clarity, guidance is offered with care,
             discretion, and understanding.
           </p>
+          <div className="mb-5">
+            <ul>
+              <li>{address.line1}</li>
+              <li>{address.line2}</li>
+              <li>
+                {address.city}, {address.state} - {address.pincode}
+              </li>
+            </ul>
+          </div>
 
-          <div className="space-y-6 font-inter text-sm md:text-base">
+          <div className="space-y-6 roboto text-sm md:text-base">
             <a
               href={`tel:${phone_number}`}
               className="flex items-center gap-4 hover:text-amber-400 transition"

@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 import Testimonials from "../Genaral/Testimonial";
 import FAQ from "../Genaral/FAQ";
 import CardCarousel from "../Genaral/CardsCarousel";
-import ImageGrid from "../Genaral/ImageGrid";
 import { person_name, phone_number, whatsapp_number } from "../Genaral/secret";
-import VashikaranGrid from "../Genaral/VashikaranGrid";
 
 const Home = () => {
   return (
@@ -18,8 +16,7 @@ const Home = () => {
     >
       <Carousel />
       {/* <AllReligion /> */}
-      <VashikaranGrid />
-      <ImageGrid />
+      {/* <ImageGrid /> */}
       <CardCarousel />
       <Problems />
       <AboutAstrologer />
@@ -38,18 +35,18 @@ export default Home;
 const Problems = () => {
   const problems = [
     {
-      title: "Lost Love Back",
-      desc: "Available via WhatsApp & Call. Speak directly for guidance and clarity.",
+      title: "Relationship Guidance",
+      desc: "Available via WhatsApp and phone consultation to discuss concerns and gain thoughtful perspective.",
       img: "https://i.pinimg.com/736x/9e/62/89/9e6289902fb93c22b7245c4a72ab355d.jpg",
     },
     {
-      title: "Marriage Problem Solution",
-      desc: "Astrology-based guidance to resolve disputes and restore harmony.",
+      title: "Marriage & Family Consultation",
+      desc: "Astrological consultation focused on understanding situations and encouraging balanced decision-making.",
       img: "https://i.pinimg.com/1200x/65/b5/7a/65b57ad4bc6f7bc20fcbd8ea7bfe3191.jpg",
     },
     {
-      title: "Vashikaran Specialist",
-      desc: "Traditional spiritual consultation focused on relationship balance.",
+      title: "Spiritual & Astrological Guidance",
+      desc: "Traditional consultation aimed at self-reflection, clarity, and personal understanding.",
       img: "https://i.pinimg.com/736x/d1/7b/6e/d17b6e6bbe4cb76812aea53029b0182d.jpg",
     },
   ];
@@ -364,19 +361,19 @@ const AstrologyServices = () => {
 const AstrologyServicesModern = () => {
   const services = [
     {
-      title: "World Famous Vashikaran Specialist",
+      title: "Traditional Astrological Consultation",
       img: "https://i.pinimg.com/736x/f4/dd/70/f4dd70b40b2060a6e0c9f81c5da1d137.jpg",
     },
     {
-      title: "Marriage Problems Specialist",
+      title: "Marriage & Family Guidance",
       img: "https://astrologerdeepaksharma.in/images/s2.png",
     },
     {
-      title: "Husband & Wife Dispute",
+      title: "Relationship Consultation",
       img: "https://astrologerdeepaksharma.in/images/s1.png",
     },
     {
-      title: "Ex Love Back Guidance",
+      title: "Personal & Emotional Guidance",
       img: "https://astrologerdeepaksharma.in/images/s3.png",
     },
   ];

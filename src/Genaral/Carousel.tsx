@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { person_name } from "./secret";
+import { business_name, person_name } from "./secret";
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start", skipSnaps: false },
-    []
+    [],
   );
 
-  const [_autoplay, setAutoplay] = useState<NodeJS.Timer | null>(null);
+  const [_autoplay, setAutoplay] = useState<any>(null);
 
   const slides = [
     {
@@ -91,7 +91,7 @@ export default function Carousel() {
                 <div className="text-center max-w-4xl px-6">
                   {/* Title */}
                   <h2 className="text-5xl md:text-7xl font-extrabold montserrat text-yellow-300 drop-shadow-lg mb-4">
-                    Famous Vashikaran
+                    {business_name}
                   </h2>
 
                   {/* Pandit Name */}
@@ -100,14 +100,16 @@ export default function Carousel() {
                   </h3>
 
                   {/* Descriptions */}
-                  <p className="text-lg md:text-2xl text-gray-100 poppins leading-relaxed mb-3">
-                    Powerful Vashikaran remedies to restore love, attract
-                    harmony, and solve complex life challenges with trusted
-                    guidance.
+                  <p className="text-lg md:text-2xl text-gray-100 poppins leading-relaxed mb-4">
+                    Traditional astrological consultation focused on guidance,
+                    clarity, and personal understanding in matters of
+                    relationships and life decisions.
                   </p>
+
                   <p className="text-lg md:text-2xl text-gray-100 poppins leading-relaxed">
-                    Decades of experience helping people worldwide with safe,
-                    ethical, and result-oriented astrology solutions.
+                    With years of experience, we provide thoughtful and ethical
+                    insights based on Vedic principles to help individuals make
+                    informed choices.
                   </p>
                 </div>
               </div>
